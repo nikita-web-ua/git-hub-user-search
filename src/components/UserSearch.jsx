@@ -12,9 +12,7 @@ export const UserSearch = ({onSubmit, searchValue, setSearchTerm, initialSearchT
         <div className={'search box'}  >
             <h2>GitHub user search</h2>
             <div>
-                <input placeholder={'Username'} value={tempSearch} onChange={(e) => {
-                    setTempSearch(e.currentTarget.value)
-                }}/>
+                <input placeholder={'Username'} value={tempSearch} onChange={e => setTempSearch(e.currentTarget.value)}/>
                 <button onClick={() => {onSubmit(tempSearch)}}>Search</button>
                 <button onClick={() => setSearchTerm(initialSearchTerm)}>Reset</button>
             </div>
